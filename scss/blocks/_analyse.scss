@@ -1,0 +1,76 @@
+.analyse {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+
+  &__card {
+    --progress-color: var(--color-success);
+
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &--sales {
+      --progress-color: var(--color-success);
+    }
+
+    &--visits {
+      --progress-color: var(--color-danger);
+    }
+
+    &--searches {
+      --progress-color: var(--color-primary);
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info h3 {
+    margin-left: 0.6rem;
+    font-size: 1rem;
+  }
+
+  &__progress {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+
+    svg {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    circle {
+      fill: none;
+      stroke: var(--progress-color);
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-dashoffset: -30;
+      stroke-dasharray: 200;
+      transform: translate(5px, 5px);
+    }
+  }
+
+  &__percentage {
+    position: absolute;
+    top: -3px;
+    left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -7,7 +7,7 @@
   padding: 0;
   outline: 0;
   text-decoration: none;
-  appearance: 0;
+  appearance: none;
 }
 
 html {
@@ -22,6 +22,13 @@ body {
   overflow-x: none;
   color: var(--color-dark);
   background-color: var(--color-background);
+}
+
+main {
+  margin-top: 1.4rem;
+}
+main h1 {
+  margin-bottom: 1.4rem;
 }
 
 img {
@@ -84,7 +91,7 @@ ul {
   display: grid;
   width: 96%;
   margin: 0 auto;
-  gap: 1.8rem;
+  gap: 2.8rem;
   grid-template-columns: 12rem auto 23rem;
 }
 
@@ -175,4 +182,69 @@ aside .sidebar .message-count {
   color: var(--color-white);
   border-radius: 50%;
   font-size: 1rem;
+}
+
+.analyse {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.analyse__card {
+  --progress-color: var(--color-success);
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.analyse__card:hover {
+  box-shadow: none;
+}
+.analyse__card--sales {
+  --progress-color: var(--color-success);
+}
+.analyse__card--visits {
+  --progress-color: var(--color-danger);
+}
+.analyse__card--searches {
+  --progress-color: var(--color-primary);
+}
+.analyse__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.analyse__info h3 {
+  margin-left: 0.6rem;
+  font-size: 1rem;
+}
+.analyse__progress {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+.analyse__progress svg {
+  width: 7rem;
+  height: 7rem;
+}
+.analyse__progress circle {
+  fill: none;
+  stroke: var(--progress-color);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dashoffset: -30;
+  stroke-dasharray: 200;
+  transform: translate(5px, 5px);
+}
+.analyse__percentage {
+  position: absolute;
+  top: -3px;
+  left: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
