@@ -4,17 +4,23 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: 0;
+  text-decoration: none;
+  appearance: 0;
+}
+
+html {
+  font-size: 14px;
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.5;
-  font-style: normal;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  overflow-x: none;
+  color: var(--color-dark);
+  background-color: var(--color-background);
 }
 
 img {
