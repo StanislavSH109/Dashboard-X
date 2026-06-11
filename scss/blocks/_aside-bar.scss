@@ -1,0 +1,37 @@
+aside {
+  height: 100vh;
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-top: 1.4rem;
+    img {
+    width: 2rem;
+    height: 2rem;
+    }
+    &__content {
+      display: flex;
+      &-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      &-title span{
+        color: var(--color-danger);
+      }
+      
+    }
+    &__close {
+        padding-right: 1rem;
+        display: none;
+      }
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    height: 88vh;
+  }
+}

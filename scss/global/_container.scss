@@ -1,7 +1,7 @@
 .container {
-  display: flex;
-  width: 100%;
-  max-width: 1400px;
+  display: grid;
+  width: 96%;
   margin: 0 auto;
-  padding: 0 20px;
+  gap: 1.8rem;
+  grid-template-columns: 12rem auto 23rem;
 }

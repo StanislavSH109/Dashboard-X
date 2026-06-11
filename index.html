@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-  <title>Dashboard X</title>
+  <title>Responsive Dashboard X</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,14 +14,16 @@
     <div class="container">
       <!-- aside menu -->
       <aside>
-        <div class="toogle">
-          <div class="logo">
-            <img src="img/logo.png" alt="logo">
-            <h2>
-              Stanislav <span class="danger">Shastov</span>
-            </h2>
+        <div class="logo logo--toggle">
+          <div class="logo__content">
+            <a href="" class="logo__content-link">
+              <img src="img/logo.png" alt="logo">
+              <h1 class="logo__content-title">
+                M<span>Prog</span>
+              </h1>
+            </a>
           </div>
-          <div class="close" id="close-btn">
+          <div class="logo__close" id="close-btn">
             <span class="material-symbols-outlined">
                 close
             </span>
@@ -41,7 +43,6 @@
             </span>
             <h3>Users</h3>
           </a>
-        </div>
           <a href="#" class="active">
             <span class="material-symbols-outlined">
               receipt_long
@@ -91,6 +92,7 @@
             </span>
             <h3>Logout</h3>
           </a>
+        </div>
       </aside>
       <!--End Aside menu-->
     </div>
