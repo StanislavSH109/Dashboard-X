@@ -1,0 +1,11 @@
+@mixin vp-1200 {
+  @media (min-width: $vp-tablet) {
+    @content;
+  }
+}
+
+@mixin vp-768 {
+  @media (min-width: $vp-mobile) {
+    @content;
+  }
+}

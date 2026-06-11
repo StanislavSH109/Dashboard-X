@@ -1,0 +1,8 @@
+// global
+@use "./global/_reboot" as *;
+@use "./global/_variables" as *;
+@use "./global/_mixins" as *;
+@use "./global/_visually-hidden" as *;
+
+// blocks
+@use "./blocks/_header" as *;
