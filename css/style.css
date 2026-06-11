@@ -123,4 +123,28 @@ aside .sidebar {
   box-shadow: var(--box-shadow);
   border-radius: 1rem;
   height: 88vh;
+  position: relative;
+  top: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+aside .sidebar:hover {
+  box-shadow: none;
+}
+aside .sidebar a {
+  display: flex;
+  align-items: center;
+  color: var(--color-info-dark);
+  height: 3.7rem;
+  gap: 1rem;
+  position: relative;
+  margin-left: 2rem;
+  transition: all 0.3s ease;
+}
+aside .sidebar a:last-child {
+  position: absolute;
+}
+aside .sidebar a span {
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
 }/*# sourceMappingURL=style.css.map */
