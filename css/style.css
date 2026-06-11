@@ -127,6 +127,7 @@ aside .sidebar {
   top: 1.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
+  min-width: 110%;
 }
 aside .sidebar:hover {
   box-shadow: none;
@@ -138,13 +139,40 @@ aside .sidebar a {
   height: 3.7rem;
   gap: 1rem;
   position: relative;
-  margin-left: 2rem;
+  margin-left: 1rem;
   transition: all 0.3s ease;
 }
 aside .sidebar a:last-child {
   position: absolute;
+  bottom: 2rem;
+  width: 100%;
 }
 aside .sidebar a span {
   font-size: 1.6rem;
   transition: all 0.3s ease;
+}
+aside .sidebar a:hover {
+  color: var(--color-primary);
+}
+aside .sidebar a:hover span {
+  margin-left: 0.6rem;
+}
+aside .sidebar a.active {
+  width: 100%;
+  color: var(--color-primary);
+  background-color: var(--color-light);
+  margin-left: 0;
+}
+aside .sidebar a.active::before {
+  content: "";
+  width: 6px;
+  height: 18px;
+  background-color: var(--color-primary);
+}
+aside .sidebar .message-count {
+  background-color: var(--color-danger);
+  padding: 2px 6px;
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */

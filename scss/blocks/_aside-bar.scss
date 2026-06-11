@@ -37,6 +37,7 @@ aside {
     top: 1.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    min-width: 110%;
     &:hover {
       box-shadow: none;
     }
@@ -47,15 +48,42 @@ aside {
       height: 3.7rem;
       gap: 1rem;
       position: relative;
-      margin-left: 2rem;
+      margin-left: 1rem;
       transition: all 0.3s ease;
       &:last-child {
         position: absolute;
+        bottom: 2rem;
+        width: 100%;
       }
       span {
         font-size: 1.6rem;
         transition: all 0.3s ease;
       }
+      &:hover {
+        color: var(--color-primary);
+        span {
+          margin-left: 0.6rem;
+        }
+      }
+    }
+    a.active {
+      width: 100%;
+      color: var(--color-primary);
+      background-color: var(--color-light);
+      margin-left: 0;
+    }
+    a.active::before {
+      content: '';
+      width: 6px;
+      height: 18px;
+      background-color: var(--color-primary);
+    }
+    .message-count {
+      background-color: var(--color-danger);
+      padding: 2px 6px;
+      color: var(--color-white);
+      border-radius: 50%;
+      font-size: 1rem;
     }
   }
 }
