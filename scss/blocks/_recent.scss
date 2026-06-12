@@ -1,0 +1,42 @@
+.recent {
+  a {
+      text-align: center;
+      display: block;
+      margin: 1rem auto;
+    }
+  table {
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: none;
+    }
+    tbody td {
+      height: 2.8rem;
+      border-bottom: 1px solid var(--color-light);
+      color: var(--color-dark-variant);
+    }
+    tbody tr:last-child td{
+      border: none;
+    }
+  }
+  .text-muted{
+      color: var(--color-info-dark);
+  }
+  .primary{
+      color: var(--color-primary);
+  }
+  .danger{
+      color: var(--color-danger);
+  }
+  .success{
+      color: var(--color-success);
+  }
+  .warning{
+      color: var(--color-warning);
+  }
+}
