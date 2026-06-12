@@ -47,6 +47,10 @@ ul {
   list-style: none;
 }
 
+h2 {
+  margin-bottom: 2rem;
+}
+
 :root {
   --color-primary: #6C9BCF;
   --color-danger: #FF0060;
@@ -261,7 +265,7 @@ aside .sidebar .message-count {
   border-radius: var(--card-border-radius);
   margin-top: 1rem;
   box-shadow: var(--box-shadow);
-  gap: 1.4rem;
+  gap: 10rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -278,4 +282,5 @@ aside .sidebar .message-count {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+  margin-bottom: 0.4rem;
 }/*# sourceMappingURL=style.css.map */

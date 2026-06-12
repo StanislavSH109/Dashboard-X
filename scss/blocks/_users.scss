@@ -9,7 +9,7 @@
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
-    gap: 1.4rem;
+    gap: 10rem;
     cursor: pointer;
     transition: all 0.3s ease;
     &:hover {
@@ -25,6 +25,7 @@
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
+      margin-bottom: 0.4rem;
     }
   }
 }
