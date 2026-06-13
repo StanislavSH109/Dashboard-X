@@ -1,31 +1,75 @@
 aside {
-  height: 100vh;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: var(--color-white);
+    width: 16rem;
+    z-index: 10;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    transform: translateX(-120%);
+    transition: transform 0.3s ease;
+  }
+
+  &.is-open {
+    @media (max-width: 768px) {
+      transform: translateX(0);
+    }
+  }
+
   .logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-top: 1.4rem;
-    img {
-    width: 2rem;
-    height: 2rem;
+
+    @media (max-width: 768px) {
+      padding: 0 1rem;
     }
+
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    h2 {
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
     &__content {
       display: flex;
+
       &-link {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
       }
-      &-title span{
+
+      &-title span {
         color: var(--color-danger);
       }
-      
     }
+
     &__close {
-        padding-right: 1rem;
-        display: none;
+      padding-right: 1rem;
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
       }
+    }
   }
+
   .sidebar {
     display: flex;
     flex-direction: column;
@@ -37,10 +81,33 @@ aside {
     top: 1.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
-    min-width: 110%;
+
+    @media (max-width: 1200px) {
+      min-width: 0;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: calc(100vh - 5rem);
+      top: 1rem;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
     &:hover {
       box-shadow: none;
     }
+
+    h3 {
+      @media (max-width: 1200px) {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+
     a {
       display: flex;
       align-items: center;
@@ -50,34 +117,53 @@ aside {
       position: relative;
       margin-left: 1rem;
       transition: all 0.3s ease;
+
+      @media (max-width: 1200px) {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+      }
+
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+        width: auto;
+        margin-left: 1rem;
+      }
+
       &:last-child {
         position: absolute;
         bottom: 2rem;
         width: 100%;
       }
+
       span {
         font-size: 1.6rem;
         transition: all 0.3s ease;
       }
+
       &:hover {
         color: var(--color-primary);
+
         span {
           margin-left: 0.6rem;
         }
       }
     }
+
     a.active {
       width: 100%;
       color: var(--color-primary);
       background-color: var(--color-light);
       margin-left: 0;
     }
+
     a.active::before {
       content: '';
       width: 6px;
       height: 18px;
       background-color: var(--color-primary);
     }
+
     .message-count {
       background-color: var(--color-danger);
       padding: 2px 6px;
@@ -86,4 +172,5 @@ aside {
       font-size: 1rem;
     }
   }
+  
 }

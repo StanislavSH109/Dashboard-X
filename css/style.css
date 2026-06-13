@@ -15,8 +15,8 @@ html {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  min-width: 320px;
+  min-height: 100vh;
   font-family: "Poppins", sans-serif;
   user-select: none;
   overflow-x: hidden;
@@ -26,6 +26,7 @@ body {
 
 main {
   margin-top: 1.4rem;
+  min-width: 0;
 }
 main h1 {
   margin-bottom: 1.4rem;
@@ -94,6 +95,22 @@ ul {
   gap: 2.8rem;
   grid-template-columns: 12rem auto 23rem;
 }
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+    gap: 1.8rem;
+    grid-template-columns: 6rem minmax(0, 1fr) 18rem;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding: 0 var(--padding-1);
+  }
+}
 
 .btn {
   cursor: pointer;
@@ -103,16 +120,51 @@ ul {
 }
 
 aside {
-  height: 100vh;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: var(--color-white);
+    width: 16rem;
+    z-index: 10;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    transform: translateX(-120%);
+    transition: transform 0.3s ease;
+  }
+}
+@media (max-width: 768px) {
+  aside.is-open {
+    transform: translateX(0);
+  }
 }
 aside .logo {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 1.4rem;
+}
+@media (max-width: 768px) {
+  aside .logo {
+    padding: 0 1rem;
+  }
 }
 aside .logo img {
   width: 2rem;
   height: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  aside .logo h2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  aside .logo h2 {
+    display: block;
+  }
 }
 aside .logo__content {
   display: flex;
@@ -130,6 +182,11 @@ aside .logo__close {
   padding-right: 1rem;
   display: none;
 }
+@media (max-width: 768px) {
+  aside .logo__close {
+    display: block;
+  }
+}
 aside .sidebar {
   display: flex;
   flex-direction: column;
@@ -141,10 +198,33 @@ aside .sidebar {
   top: 1.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
-  min-width: 110%;
+}
+@media (max-width: 1200px) {
+  aside .sidebar {
+    min-width: 0;
+  }
+}
+@media (max-width: 768px) {
+  aside .sidebar {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    top: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
 aside .sidebar:hover {
   box-shadow: none;
+}
+@media (max-width: 1200px) {
+  aside .sidebar h3 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  aside .sidebar h3 {
+    display: block;
+  }
 }
 aside .sidebar a {
   display: flex;
@@ -155,6 +235,20 @@ aside .sidebar a {
   position: relative;
   margin-left: 1rem;
   transition: all 0.3s ease;
+}
+@media (max-width: 1200px) {
+  aside .sidebar a {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  aside .sidebar a {
+    justify-content: flex-start;
+    width: auto;
+    margin-left: 1rem;
+  }
 }
 aside .sidebar a:last-child {
   position: absolute;
@@ -196,6 +290,17 @@ aside .sidebar .message-count {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
 }
+@media (max-width: 1200px) {
+  .analyse {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .analyse {
+    grid-template-columns: 1fr;
+  }
+}
 .analyse__card {
   --progress-color: var(--color-success);
   background-color: var(--color-white);
@@ -204,6 +309,11 @@ aside .sidebar .message-count {
   box-shadow: var(--box-shadow);
   cursor: pointer;
   transition: all 0.3s ease;
+}
+@media (max-width: 1200px) {
+  .analyse__card {
+    padding: 1.4rem;
+  }
 }
 .analyse__card:hover {
   box-shadow: none;
@@ -272,6 +382,18 @@ aside .sidebar .message-count {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+@media (max-width: 1200px) {
+  .users__list {
+    gap: 2rem;
+    padding: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .users__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 .users__list:hover {
   box-shadow: none;
 }
@@ -288,6 +410,18 @@ aside .sidebar .message-count {
   margin-bottom: 0.4rem;
 }
 
+@media (max-width: 1200px) {
+  .recent {
+    width: 100%;
+    margin-top: 2rem;
+    overflow-x: auto;
+  }
+}
+@media (max-width: 768px) {
+  .recent {
+    margin-top: 1.4rem;
+  }
+}
 .recent a {
   text-align: center;
   display: block;
@@ -302,6 +436,16 @@ aside .sidebar .message-count {
   border-radius: var(--card-border-radius);
   transition: all 0.3s ease;
 }
+@media (max-width: 1200px) {
+  .recent table {
+    min-width: 34rem;
+  }
+}
+@media (max-width: 768px) {
+  .recent table {
+    min-width: 40rem;
+  }
+}
 .recent table:hover {
   box-shadow: none;
 }
@@ -312,6 +456,10 @@ aside .sidebar .message-count {
 }
 .recent table tbody tr:last-child td {
   border: none;
+}
+.recent table tbody tr td:last-child,
+.recent table tbody tr td:first-child {
+  display: none;
 }
 .recent .text-muted {
   color: var(--color-info-dark);
@@ -333,15 +481,39 @@ aside .sidebar .message-count {
   margin-top: 1.4rem;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  .nav {
+    display: contents;
+  }
+}
 .nav__menu {
   display: none;
 }
+@media (max-width: 768px) {
+  .nav__menu {
+    display: block;
+  }
+}
 .nav__content {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  .nav__content {
+    order: -1;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 0.8rem 0;
+    background-color: var(--color-background);
+  }
 }
 .nav__profile {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
 }
 .nav__profile-info {
@@ -349,6 +521,11 @@ aside .sidebar .message-count {
   flex-direction: column;
   align-items: end;
   gap: 0.2rem;
+}
+@media (max-width: 768px) {
+  .nav__profile-info {
+    display: none;
+  }
 }
 .nav__profile img {
   width: 3rem;
@@ -393,6 +570,16 @@ aside .sidebar .message-count {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+@media (max-width: 1200px) {
+  .user-profile {
+    padding: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .user-profile {
+    margin-top: 0;
+  }
+}
 .user-profile:hover {
   box-shadow: none;
 }
@@ -401,6 +588,12 @@ aside .sidebar .message-count {
   height: 11rem;
   margin-bottom: 0.8rem;
   border-radius: 50%;
+}
+@media (max-width: 1200px) {
+  .user-profile img {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 .user-profile h2 {
   margin-bottom: 0.2rem;
@@ -415,6 +608,11 @@ aside .sidebar .message-count {
   padding: var(--card-padding);
   box-shadow: var(--box-shadow);
   transition: all 0.3s ease;
+}
+@media (max-width: 1200px) {
+  .notifications {
+    padding: 1.2rem;
+  }
 }
 .notifications:hover {
   box-shadow: none;
@@ -450,6 +648,12 @@ aside .sidebar .message-count {
 .notifications--add {
   display: flex;
   justify-content: center;
+  align-items: center;
+  border: 2px dashed var(--color-primary);
+}
+.notifications--add:hover {
+  color: white;
+  background-color: var(--color-primary);
 }
 
 .reminders {

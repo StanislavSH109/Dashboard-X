@@ -10,3 +10,29 @@ Orders.forEach(order => {
   tr.innerHTML = trContent; 
   document.querySelector('table tbody').appendChild(tr);
 });
+
+const sideMenu = document.querySelector('aside');
+const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-btn');
+const lightBtn = document.getElementById('light-btn');
+const darkBtn = document.getElementById('dark-btn');
+
+menuBtn.addEventListener('click', () => {
+  sideMenu.classList.add('is-open');
+});
+
+closeBtn.addEventListener('click', () => {
+  sideMenu.classList.remove('is-open');
+});
+
+lightBtn.addEventListener('click', () => {
+  document.body.classList.remove('dark-mode-variables');
+  lightBtn.querySelector('span').classList.add('active');
+  darkBtn.querySelector('span').classList.remove('active');
+});
+
+darkBtn.addEventListener('click', () => {
+  document.body.classList.add('dark-mode-variables');
+  darkBtn.querySelector('span').classList.add('active');
+  lightBtn.querySelector('span').classList.remove('active');
+});

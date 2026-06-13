@@ -1,9 +1,20 @@
 .recent {
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin-top: 2rem;
+    overflow-x: auto;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1.4rem;
+  }
+
   a {
-      text-align: center;
-      display: block;
-      margin: 1rem auto;
-    }
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+  }
+
   table {
     background-color: var(--color-white);
     width: 100%;
@@ -12,31 +23,52 @@
     box-shadow: var(--box-shadow);
     border-radius: var(--card-border-radius);
     transition: all 0.3s ease;
+
+    @media (max-width: 1200px) {
+      min-width: 34rem;
+    }
+
+    @media (max-width: 768px) {
+      min-width: 40rem;
+    }
+
     &:hover {
       box-shadow: none;
     }
+
     tbody td {
       height: 2.8rem;
       border-bottom: 1px solid var(--color-light);
       color: var(--color-dark-variant);
     }
-    tbody tr:last-child td{
+
+    tbody tr:last-child td {
       border: none;
     }
+
+    tbody tr td:last-child,
+    tbody tr td:first-child {
+      display: none;
+    }
   }
-  .text-muted{
-      color: var(--color-info-dark);
+
+  .text-muted {
+    color: var(--color-info-dark);
   }
-  .primary{
-      color: var(--color-primary);
+
+  .primary {
+    color: var(--color-primary);
   }
-  .danger{
-      color: var(--color-danger);
+
+  .danger {
+    color: var(--color-danger);
   }
-  .success{
-      color: var(--color-success);
+
+  .success {
+    color: var(--color-success);
   }
-  .warning{
-      color: var(--color-warning);
+
+  .warning {
+    color: var(--color-warning);
   }
 }
