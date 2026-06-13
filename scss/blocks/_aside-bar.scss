@@ -24,13 +24,7 @@ aside {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1.4rem;
-    
-
-    @media (max-width: 768px) {
-      padding: 0 1rem;
-    }
-
+    margin-top: 0.5rem;
     img {
       width: 4rem;
       height: 4rem;

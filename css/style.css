@@ -145,12 +145,7 @@ aside .logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1.4rem;
-}
-@media (max-width: 768px) {
-  aside .logo {
-    padding: 0 1rem;
-  }
+  margin-top: 0.5rem;
 }
 aside .logo img {
   width: 4rem;
