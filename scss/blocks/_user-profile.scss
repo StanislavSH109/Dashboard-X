@@ -1,0 +1,24 @@
+.user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  margin-top: 1rem;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: all .3s ease;
+  &:hover {
+    box-shadow: none;
+  }
+  img {
+    width: 11rem;
+    height: 11rem;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+  }
+  h2 {
+    margin-bottom: 0.2rem;
+  }
+}

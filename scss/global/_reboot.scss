@@ -18,7 +18,7 @@ body {
   height: 100vh;
   font-family: 'Poppins', sans-serif;
   user-select: none;
-  overflow-x: none;
+  overflow-x: hidden;
   color: var(--color-dark);
   background-color: var(--color-background);
 }
@@ -43,8 +43,4 @@ a{
 
 ul {
   list-style: none;
-}
-
-h2 {
-  margin-bottom: 2rem;
 }
