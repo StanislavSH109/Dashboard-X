@@ -496,7 +496,7 @@ aside .sidebar .message-count {
 }
 .nav__content {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
