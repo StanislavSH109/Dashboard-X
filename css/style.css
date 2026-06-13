@@ -331,6 +331,9 @@ aside .sidebar .message-count {
 
 .nav {
   margin-top: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .nav__menu {
   display: none;
@@ -407,6 +410,11 @@ aside .sidebar .message-count {
 
 .notifications {
   display: flex;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-2);
+  padding: var(--card-padding);
 }
 .notifications__content {
   display: flex;
