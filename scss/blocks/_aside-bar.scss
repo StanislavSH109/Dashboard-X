@@ -25,14 +25,15 @@ aside {
     align-items: center;
     justify-content: space-between;
     margin-top: 1.4rem;
+    
 
     @media (max-width: 768px) {
       padding: 0 1rem;
     }
 
     img {
-      width: 2rem;
-      height: 2rem;
+      width: 4rem;
+      height: 4rem;
     }
 
     h2 {
@@ -52,7 +53,6 @@ aside {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 0.5rem;
       }
 
       &-title span {

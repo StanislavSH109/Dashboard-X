@@ -153,8 +153,8 @@ aside .logo {
   }
 }
 aside .logo img {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
 }
 @media screen and (max-width: 1200px) {
   aside .logo h2 {
@@ -173,7 +173,6 @@ aside .logo__content-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
 }
 aside .logo__content-title span {
   color: var(--color-danger);
@@ -456,10 +455,6 @@ aside .sidebar .message-count {
 }
 .recent table tbody tr:last-child td {
   border: none;
-}
-.recent table tbody tr td:last-child,
-.recent table tbody tr td:first-child {
-  display: none;
 }
 .recent .text-muted {
   color: var(--color-info-dark);
