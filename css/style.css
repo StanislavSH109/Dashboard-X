@@ -331,9 +331,7 @@ aside .sidebar .message-count {
 
 .nav {
   margin-top: 1.4rem;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .nav__menu {
   display: none;
@@ -415,15 +413,43 @@ aside .sidebar .message-count {
   background-color: var(--color-white);
   border-radius: var(--border-radius-2);
   padding: var(--card-padding);
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+.notifications:hover {
+  box-shadow: none;
+}
+.notifications {
+  cursor: pointer;
+}
+.notifications span {
+  cursor: pointer;
 }
 .notifications__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
-.notifications__inner {
+.notifications__content .material-symbols-outlined--volume {
+  background-color: var(--color-success);
+}
+.notifications__content span {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 20%;
+  background-color: var(--color-danger);
+}
+.notifications__content--add span {
+  background-color: transparent;
+}
+.notifications__text {
   display: flex;
   flex-direction: column;
+}
+.notifications--add {
+  display: flex;
+  justify-content: center;
 }
 
 .reminders {

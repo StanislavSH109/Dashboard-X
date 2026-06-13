@@ -5,13 +5,42 @@
   background-color: var(--color-white);
   border-radius: var(--border-radius-2);
   padding: var(--card-padding);
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+  &:hover {
+    box-shadow: none;
+  }
+  cursor: pointer;
+  span {
+    cursor: pointer;
+  }
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    .material-symbols-outlined--volume {
+        background-color: var(--color-success);
+      }
+    span {
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 20%;
+      background-color: var(--color-danger);
+    }
+    &--add {
+      span {
+        background-color: transparent;
+      }
+    }
   }
-  &__inner {
+  &__text {
     display: flex;
     flex-direction: column;
+  }
+
+  &--add {
+    display: flex;
+    justify-content: center;
   }
 }

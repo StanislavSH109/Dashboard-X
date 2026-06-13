@@ -1,8 +1,6 @@
 .nav {
   margin-top: 1.4rem;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   &__menu {
     display: none;
   }
@@ -39,7 +37,6 @@
       align-items: center;
       justify-content: center;
       padding: 4px;
-      // width: 50%;
       height: 100%;
       font-size: 1.4rem;
     }
