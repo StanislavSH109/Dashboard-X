@@ -283,6 +283,7 @@ aside .sidebar .message-count {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
+  margin-top: 2.2rem;
 }
 @media (max-width: 1200px) {
   .analyse {
@@ -370,7 +371,7 @@ aside .sidebar .message-count {
   background-color: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
-  margin-top: 1rem;
+  margin-top: 2.2rem;
   box-shadow: var(--box-shadow);
   gap: 5rem;
   cursor: pointer;
@@ -404,6 +405,9 @@ aside .sidebar .message-count {
   margin-bottom: 0.4rem;
 }
 
+.recent {
+  margin-top: 1.4rem;
+}
 @media (max-width: 1200px) {
   .recent {
     width: 100%;
@@ -429,6 +433,7 @@ aside .sidebar .message-count {
   box-shadow: var(--box-shadow);
   border-radius: var(--card-border-radius);
   transition: all 0.3s ease;
+  margin-top: 2.2rem;
 }
 @media (max-width: 1200px) {
   .recent table {

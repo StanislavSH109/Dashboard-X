@@ -1,4 +1,5 @@
 .recent {
+  margin-top: 1.4rem;
   @media (max-width: 1200px) {
     width: 100%;
     margin-top: 2rem;
@@ -23,7 +24,7 @@
     box-shadow: var(--box-shadow);
     border-radius: var(--card-border-radius);
     transition: all 0.3s ease;
-
+    margin-top: 2.2rem;
     @media (max-width: 1200px) {
       min-width: 34rem;
     }
