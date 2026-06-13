@@ -1,217 +1,219 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <title>Responsive Dashboard X</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>Responsive Dashboard X</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-  <div class="container">
-    <aside>
-      <div class="logo logo--toggle">
-        <div class="logo__content">
-          <a href="" class="logo__content-link">
-            <img src="img/logo.png" alt="logo" />
-            <h1 class="logo__content-title">
-              A<span>Prog</span>
-            </h1>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="logo logo--toggle">
+          <div class="logo__content">
+            <a href="" class="logo__content-link">
+              <img src="img/logo.png" alt="logo" />
+              <h1 class="logo__content-title">
+                A<span>Prog</span>
+              </h1>
+            </a>
+          </div>
+          <div class="logo__close" id="close-btn">
+            <span class="material-symbols-outlined"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="#">
+            <span class="material-symbols-outlined">
+              dashboard
+            </span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">
+              person_outline
+            </span>
+            <h3>Users</h3>
+          </a>
+          <a href="#" class="active">
+            <span class="material-symbols-outlined">
+              receipt_long
+            </span>
+            <h3>History</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">
+              insights
+            </span>
+            <h3>Analytics</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">
+              mail_outline
+            </span>
+            <h3>Tickets</h3>
+            <span class="message-count">27</span>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">
+              inventory
+            </span>
+            <h3>Sale List</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined"> report </span>
+            <h3>Reports</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">
+              settings
+            </span>
+            <h3>Settings</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined"> add </span>
+            <h3>New Login</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined"> logout </span>
+            <h3>Logout</h3>
           </a>
         </div>
-        <div class="logo__close" id="close-btn">
-          <span class="material-symbols-outlined"> close </span>
-        </div>
-      </div>
+      </aside>
 
-      <div class="sidebar">
-        <a href="#">
-          <span class="material-symbols-outlined">
-            dashboard
-          </span>
-          <h3>Dashboard</h3>
-        </a>
-        <a href="#">
-          <span class="material-symbols-outlined">
-            person_outline
-          </span>
-          <h3>Users</h3>
-        </a>
-        <a href="#" class="active">
-          <span class="material-symbols-outlined">
-            receipt_long
-          </span>
-          <h3>History</h3>
-        </a>
-        <a href="#">
-          <span class="material-symbols-outlined">
-            insights
-          </span>
-          <h3>Analytics</h3>
-        </a>
-        <a href="#">
-          <span class="material-symbols-outlined">
-            mail_outline
-          </span>
-          <h3>Tickets</h3>
-          <span class="message-count">27</span>
-        </a>
-        <a href="#">
-          <span class="material-symbols-outlined">
-            inventory
-          </span>
-          <h3>Sale List</h3>
-        </a>
-        <a href="#">
-          <span class="material-symbols-outlined"> report </span>
-          <h3>Reports</h3>
-        </a>
-        <a href="#">
-          <span class="material-symbols-outlined">
-            settings
-          </span>
-          <h3>Settings</h3>
-        </a>
-        <a href="#">
-          <span class="material-symbols-outlined"> add </span>
-          <h3>New Login</h3>
-        </a>
-        <a href="#">
-          <span class="material-symbols-outlined"> logout </span>
-          <h3>Logout</h3>
-        </a>
-      </div>
-    </aside>
-
-    <main>
-      <h2>Analytics</h2>
-      <div class="analyse">
-        <div class="analyse__card analyse__card--sales">
-          <div class="analyse__status">
-            <div class="analyse__info">
-              <h3>Total Sales</h3>
-              <h2>$65,024</h2>
+      <main>
+        <h2>Analytics</h2>
+        <div class="analyse">
+          <div class="analyse__card analyse__card--sales">
+            <div class="analyse__status">
+              <div class="analyse__info">
+                <h3>Total Sales</h3>
+                <h2>$65,024</h2>
+              </div>
+              <div class="analyse__progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="analyse__percentage">
+                  <p>+81%</p>
+                </div>
+              </div>
             </div>
-            <div class="analyse__progress">
-              <svg>
-                <circle cx="38" cy="38" r="36"></circle>
-              </svg>
-              <div class="analyse__percentage">
-                <p>+81%</p>
+          </div>
+          <div class="analyse__card analyse__card--visits">
+            <div class=" analyse__status">
+              <div class=" analyse__info">
+                <h3>Site Visits</h3>
+                <h2>24,980</h2>
+              </div>
+              <div class=" analyse__progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class=" analyse__percentage">
+                  <p>+21%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="analyse__card analyse__card--searches">
+            <div class=" analyse__status">
+              <div class=" analyse__status-info">
+                <h3>Searches</h3>
+                <h2>14,770</h2>
+              </div>
+              <div class=" analyse__progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class=" analyse__percentage">
+                  <p>+35%</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="analyse__card analyse__card--visits">
-          <div class=" analyse__status">
-            <div class=" analyse__info">
-              <h3>Site Visits</h3>
-              <h2>24,980</h2>
+        <div class="users">
+          <h2>New Users</h2>
+          <div class="users__list">
+            <div class="users__card">
+              <img src="/img/profile-2.jpg" alt="avatar" class="users__img">
+              <h3 class="users__name">Jack</h3>
+              <span class="users__time">54 min ago</span>
             </div>
-            <div class=" analyse__progress">
-              <svg>
-                <circle cx="38" cy="38" r="36"></circle>
-              </svg>
-              <div class=" analyse__percentage">
-                <p>+21%</p>
+            <div class="users__card">
+              <img src="/img/profile-3.jpg" alt="avatar" class="users__img">
+              <h3 class="users__name">Amir</h3>
+              <span class="users__time">3 hours ago</span>
+            </div>
+            <div class="users__card">
+              <img src="/img/profile-4.jpg" alt="avatar" class="users__img">
+              <h3 class="users__name">Ember</h3>
+              <span class="users__time">6 hours ago</span>
+            </div>
+            <div class="users__card">
+              <img src="/img/plus.png" alt="plus" class="users__img">
+              <h3 class="users__name">More</h3>
+              <span class="users__time">New User</span>
+            </div>
+          </div>
+        </div>
+        <div class="recent">
+          <h2>Recent Orders</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Course Name</th>
+                <th>Course Number</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <a href="#">Show All</a>
+        </div>      
+      </main>
+      <div class="nav">
+          <div class="nav__content">
+            <div class="nav__menu">
+              <button class="nav__menu-btn btn" id="menu-btn">
+                <span class="material-symbols-outlined">dehaze</span>
+              </button>
+            </div>
+            <div class="nav__theme">
+              <div class="nav__theme-light">
+                <button class="nav__theme-btn btn" id="light-btn">
+                <span class="material-symbols-outlined active">light_mode</span>
+                </button>
+              </div>
+              <div class="nav__theme-dark">
+                <button class="nav__theme-btn btn" id="dark-btn">
+                <span class="material-symbols-outlined">bedtime</span>
+                </button>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="analyse__card analyse__card--searches">
-          <div class=" analyse__status">
-            <div class=" analyse__status-info">
-              <h3>Searches</h3>
-              <h2>14,770</h2>
-            </div>
-            <div class=" analyse__progress">
-              <svg>
-                <circle cx="38" cy="38" r="36"></circle>
-              </svg>
-              <div class=" analyse__percentage">
-                <p>+35%</p>
+            <div class="nav__profile">
+              <div class="nav__profile-info">
+                <span>Hey, <b>Shastinho</b></span>
+                <small class="nav__profile-muted">Admin</small>
               </div>
+              <img src="img/profile-1.jpg" alt="photo-admin">
             </div>
           </div>
-        </div>
       </div>
-      <div class="users">
-        <h2>New Users</h2>
-        <div class="users__list">
-          <div class="users__card">
-            <img src="/img/profile-2.jpg" alt="avatar" class="users__img">
-            <h3 class="users__name">Jack</h3>
-            <span class="users__time">54 min ago</span>
-          </div>
-          <div class="users__card">
-            <img src="/img/profile-3.jpg" alt="avatar" class="users__img">
-            <h3 class="users__name">Amir</h3>
-            <span class="users__time">3 hours ago</span>
-          </div>
-          <div class="users__card">
-            <img src="/img/profile-4.jpg" alt="avatar" class="users__img">
-            <h3 class="users__name">Ember</h3>
-            <span class="users__time">6 hours ago</span>
-          </div>
-          <div class="users__card">
-            <img src="/img/plus.png" alt="plus" class="users__img">
-            <h3 class="users__name">More</h3>
-            <span class="users__time">New User</span>
-          </div>
-        </div>
+      <div class="about">
+        
       </div>
-      <div class="recent">
-        <h2>Recent Orders</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Course Name</th>
-              <th>Course Number</th>
-              <th>Payment</th>
-              <th>Status</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-        <a href="#">Show All</a>
-      </div>      
-    </main>
-    <div class="nav">
-        <div class="nav__content">
-          <div class="nav__menu">
-            <button class="nav__menu-btn btn" id="menu-btn">
-              <span class="material-symbols-outlined">dehaze</span>
-            </button>
-          </div>
-          <div class="nav__light">
-            <button class="nav__light-btn btn" id="light-btn">
-            <span class="material-symbols-outlined">light_mode</span>
-            </button>
-          </div>
-          <div class="nav__dark">
-            <button class="nav__dark-btn btn" id="dark-btn">
-            <span class="material-symbols-outlined">bedtime</span>
-            </button>
-          </div>
-          <div class="nav__profile">
-            <div class="nav__profile-info">
-              <span>Hey, <b>Shastinho</b></span>
-              <small class="nav__profile-muted">Admin</small>
-            </div>
-            <img src="img/profile-1.jpg" alt="photo-admin">
-          </div>
-        </div>
     </div>
-    <div class="about">
-      
-    </div>
-  </div>
-  <script src="js/orders.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/orders.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 
 </html>
